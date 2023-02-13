@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+    background-color: #36382E;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1250px;
+    height: 1250px;
+    margin: auto;
+}
+
+.title {
+    font-size: 100px;
+    word-spacing: 5px;
+    color: #5BC3EB;
+    padding: 100px 0;
+    text-shadow: 4px 3px 0 #ffffff;
+}
+
+.intro-text {
+    padding-bottom: 50px;
+    font-size: 35px;
+    color: #DADAD9;
+}
+
+.winner-msg-area {
+    width: 100%;
+    padding: 50px;
+}
+
+.winner-msg-text {
+    position: relative;
+    top: -470px;
+    padding: 10px;
+    background-color: black;
+}
+
+#winnerMsgTxt {
+    font-size: 65px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.game {
+    display: flex;
+    font-size: 20px;
+}
+
+.player1-score {
+    padding: 10px;
+}
+
+.player2-score {
+    padding: 10px;
+}
+
+.game-board {
+    padding: 10px;
+    width: 70%;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 500px;
+    height: 500px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+}
+
+.bottom-border {
+    border-bottom: 10px solid #DADAD9;
+}
+
+.right-border {
+    border-right: 10px solid #DADAD9;
+}
+
+.strike {
+    position: absolute;
+    background-color: rgb(248, 248, 133);
+    opacity: 35%;
+}
+
+.strike-row-1 {
+    width: 100%;
+    height: 5px;
+    top: 16%;
+}
+
+.strike-row-2 {
+    width: 100%;
+    height: 5px;
+    top: 48%;
+}
+
+.strike-row-3 {
+    width: 100%;
+    height: 5px;
+    top: 82%;
+}
+
+.strike-col-1 {
+    height: 100%;
+    width: 5px;
+    left: 16%;
+}
+
+.strike-col-2 {
+    height: 100%;
+    width: 5px;
+    left: 48%;
+}
+
+.strike-col-3 {
+    height: 100%;
+    width: 5px;
+    left: 82%;
+}
+
+.strike-dia-1 {
+    width: 90%;
+    height: 5px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg);
+}
+
+.strike-dia-2 {
+    width: 90%;
+    height: 5px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg);
+}
+
+.X-hover:hover::after {
+    content: "X";
+    opacity: 0.4;
+    color: #F06449;
+}
+
+.O-hover:hover::after {
+    content: "O";
+    opacity: 0.4;
+    color: #5BC3EB;
+}
+
+#restartBtn {
+  background-color: #DADAD9;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  box-shadow: #000000 4px 4px 0 0;
+  color: #000000;
+  cursor: pointer;
+  margin-top: 100px;
+  padding: 10px;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 45px;
+  padding: 0 18px;
+  line-height: 50px;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#restartBtn:hover {
+  background-color: #EDE6E3;
+}
+#restartBtn:hover {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
