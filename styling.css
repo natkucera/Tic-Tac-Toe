@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body {
-    margin: 0;
     font-family: 'Fredoka One', cursive;
     background-color: #36382E;
 }
@@ -10,23 +9,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1250px;
-    height: 1250px;
+    width: 100%;
+    height: 100%;
     margin: auto;
 }
 
 .title {
-    font-size: 100px;
+    font-size: 150px;
     word-spacing: 5px;
     color: #5BC3EB;
-    padding: 100px 0;
+    padding-top: 150px;
     text-shadow: 4px 3px 0 #ffffff;
 }
 
 .intro-text {
-    padding-bottom: 50px;
-    font-size: 35px;
+    display: flex;
+    font-size: 50px;
     color: #DADAD9;
+    gap: 70px;
+    padding-bottom: 25px;
 }
 
 .winner-msg-area {
@@ -58,7 +59,9 @@ body {
 
 .game {
     display: flex;
-    font-size: 20px;
+    font-size: 50px;
+    width: 100%;
+    display: contents;
 }
 
 .player1-score {
@@ -71,14 +74,15 @@ body {
 
 .game-board {
     padding: 10px;
-    width: 70%;
+    width: 100%;
 }
 
 #board {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 500px;
     cursor: pointer;
     position: relative;
@@ -199,9 +203,25 @@ body {
   transform: translate(2px, 2px);
 }
 
-@media (min-width: 768px) {
-  .button-74 {
-    min-width: 120px;
-    padding: 0 25px;
+@media screen and (max-width: 500px) {
+    body {
+        margin: auto;
+        width: 400px;
+    }
+    .title {
+        font-size: 65px;
+        word-spacing: normal;
+        padding: 10px;
+        text-align: center;
+    }
+    .intro-text {
+        font-size: 25px;
+        padding: 10px;
+        gap: 25px;
+    }
+
+    #restartBtn {
+        padding: 5px;
+        margin: 10px;
+    }
   }
-}
